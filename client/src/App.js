@@ -16,9 +16,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route index element={<Home/>} />
-        <Route path="womensproducts" element={<WomensProducts />} />
-        <Route path="mensproducts" element={<MensProducts />} />
-        <Route path="shoppingcart" element={<ShoppingCart />} />
+        <Route path="/womensproducts" element={<WomensProducts />} />
+        <Route path="/mensproducts" element={<MensProducts />} />
+        <Route path="/shoppingcart" element={<ShoppingCart />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
