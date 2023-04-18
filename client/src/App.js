@@ -13,6 +13,7 @@ function App() {
 
   return (
     <>
+    <div className='container'>
       <Navbar />
       <Routes>
         <Route index element={<Home/>} />
@@ -21,6 +22,7 @@ function App() {
         <Route path="shoppingcart" element={<ShoppingCart />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+    </div>
     </>
   );
 }
