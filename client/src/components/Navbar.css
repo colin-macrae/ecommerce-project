@@ -1,7 +1,3 @@
-.navbar {
-  /* position: fixed; */
-}
-
 .nav-columns {
   justify-content: space-between;
   width: 100%;
@@ -13,10 +9,6 @@
   display: flex;
   justify-content: space-between;
   padding-left: 10px;
-}
-
-.shop-men-link {
-   /* margin-right: 15px; */
 }
 
 .one-third {

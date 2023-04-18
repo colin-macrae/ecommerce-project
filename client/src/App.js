@@ -1,5 +1,4 @@
 // import { useEffect, useState } from 'react';
-// import logo from './logo.svg';
 import './App.css';
 import { Routes, Route } from "react-router-dom";
 import MensProducts from './pages/Mens-products';
@@ -31,26 +30,7 @@ export default App;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// //////////////////////////// the code below is for use/examples for later issues
 // function App() {
 //   const [serverData, setServerData] = useState("");
 
