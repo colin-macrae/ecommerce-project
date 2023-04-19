@@ -1,4 +1,21 @@
-.App {
+.navbar {
+  /* background-color: rgb(230, 230, 230); */
+  border-bottom: solid rgb(185, 185, 185) 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +52,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

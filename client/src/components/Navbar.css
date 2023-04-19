@@ -1,0 +1,49 @@
+.nav-columns {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-col-left {
+  font-size: 9px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+
+.one-third {
+  width: 33%;
+}
+
+.nav-col-center {
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 1;
+
+}
+
+.premium-cycling-wear {
+  font-size: 6px;
+  margin-top: 3px;
+}
+
+.nav-col-center p {
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.nav-col-right {
+  text-align: right;
+  padding-right: 10px;
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+  color:black;
+}
+
+img {
+  margin-top: 15px;
+}
