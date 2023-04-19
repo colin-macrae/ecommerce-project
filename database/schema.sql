@@ -6,16 +6,16 @@ drop schema "public" cascade;
 
 create schema "public";
 
-CREATE TABLE "public"."Products" (
+CREATE TABLE "public"."products" (
 	"productId" serial NOT NULL,
-	"type" serial NOT NULL,
-	"gender" serial NOT NULL,
-	"name" serial NOT NULL,
-	"description" serial NOT NULL,
-	"details" serial NOT NULL,
-	"price" serial NOT NULL,
-	"color" serial NOT NULL,
-	CONSTRAINT "Products_pk" PRIMARY KEY ("productId")
+	"type" text NOT NULL,
+	"gender" text NOT NULL,
+	"name" text NOT NULL,
+	"description" text NOT NULL,
+	"details" text NOT NULL,
+	"price" decimal NOT NULL,
+	"color" text NOT NULL,
+	CONSTRAINT "products_pk" PRIMARY KEY ("productId")
 ) WITH (
   OIDS=FALSE
 );

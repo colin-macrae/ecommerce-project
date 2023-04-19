@@ -3,9 +3,7 @@
 
 -- EXAMPLE:
 
---  insert into "todos"
---    ("task", "isCompleted")
---    values
---      ('Learn to code', false),
---      ('Build projects', false),
---      ('Get a job', false);
+ insert into "products"
+   ("type", "gender", "name", "description", "details", "price", "color")
+   values
+     ('jersey', 'm', 'mechanism', 'bright and yellow', 'very nice jersey for the price.  it should be $200 yo.  it also fits well.', 99.00, 'i already said yellow');
