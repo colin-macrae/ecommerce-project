@@ -35,7 +35,8 @@ app.get('/api/products', async (req, res, next) => {
             "description",
             "details",
             "price",
-            "color"
+            "color",
+            "url"
         from "products"
     `;
     const products = await db.query(sql);
