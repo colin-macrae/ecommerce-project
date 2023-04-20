@@ -1,7 +1,33 @@
 .card-body {
   width: 50%;
+  /* margin: 0; */
+  padding: 2px;
 }
 
 .card-body img {
   width: 100%;
 }
+
+.card-body p {
+  line-height: 1;
+  margin-left: 2px;
+}
+
+.product-page-copy-header {
+  font-size: 18px;
+  margin-top: 50px;
+}
+
+.product-page-copy-text {
+  font-size: 12px;
+}
+
+.product-page-copy-header, .product-page-copy-text {
+  color: rgb(60, 60, 60);
+  text-align: center;
+  padding: 0 40px 0 40px;
+}
+
+/* .product-page-copy-container {
+  width: 150px;
+} */

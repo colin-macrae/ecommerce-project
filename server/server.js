@@ -26,7 +26,7 @@ app.use(express.json());
 //   res.json({ message: 'Hello World!' });
 // });
 
-app.get('/api/products', async (req, res, next) => {
+app.get('/api/mensproducts', async (req, res, next) => {
   try {
     const sql = `
       select "type",
@@ -38,6 +38,29 @@ app.get('/api/products', async (req, res, next) => {
             "color",
             "url"
         from "products"
+        where "gender" = 'm'
+    `;
+    const products = await db.query(sql);
+    // res.json(products.rows[0].color);
+    res.json(products.rows);
+  } catch (err) {
+    next(err);
+  }
+});
+
+app.get('/api/womensproducts', async (req, res, next) => {
+  try {
+    const sql = `
+      select "type",
+            "gender",
+            "name",
+            "description",
+            "details",
+            "price",
+            "color",
+            "url"
+        from "products"
+        where "gender" = 'w'
     `;
     const products = await db.query(sql);
     // res.json(products.rows[0].color);
