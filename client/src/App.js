@@ -7,6 +7,8 @@ import WomensProducts from './pages/Womens-products';
 import Home from './pages/Home';
 import ShoppingCart from './pages/Shopping-cart';
 import NotFound from './pages/NotFound';
+import ProductDetails from './pages/ProductDetails';
+
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
         <Route path="/womensproducts" element={<WomensProducts />} />
         <Route path="/mensproducts" element={<MensProducts />} />
         <Route path="/shoppingcart" element={<ShoppingCart />} />
+        <Route path="/productdetails:productId" element={<ProductDetails />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

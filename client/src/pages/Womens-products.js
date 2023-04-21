@@ -37,7 +37,7 @@ function Product({ product }) {
     <div className='row'>
       <div className="card-body">
         <img src={url} alt='product' />
-        <p className="card-title">{name}</p>
+        <p className="card-title item-name">{name}</p>
         <p className="card-title">{color}</p>
         <p className="card-title">${price}</p>
       </div>

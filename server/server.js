@@ -36,7 +36,8 @@ app.get('/api/mensproducts', async (req, res, next) => {
             "details",
             "price",
             "color",
-            "url"
+            "url",
+            "productId"
         from "products"
         where "gender" = 'm'
     `;
@@ -58,7 +59,8 @@ app.get('/api/womensproducts', async (req, res, next) => {
             "details",
             "price",
             "color",
-            "url"
+            "url",
+            "productId"
         from "products"
         where "gender" = 'w'
     `;
