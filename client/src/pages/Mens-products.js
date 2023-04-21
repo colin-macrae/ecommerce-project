@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './MensProducts.css'
+import './productpages.css'
 
 export default function MensProducts() {
   const [serverData, setServerData] = useState([]);
@@ -8,33 +8,13 @@ export default function MensProducts() {
     async function getServerData() {
       const resp = await fetch('/api/mensproducts');
       const data = await resp.json();
-
-      console.log('data:', data);
-
       setServerData(data);
     }
-
     getServerData();
   }, []);
 
-  // console.log('serverData', serverData)
-  // const itemType = serverData.map(item => <li>{item.price}</li>)
-  // const itemType = serverData.map((item, index) =>
-  // <div>
-  //   <li key={index}>{item.price}</li>
-  //   <li key={index}>{item.type}</li>
-  // </div>
-  // )
-  // const description = serverData.map((item, index) => <li key={index}>{item.description}</li>)
-
   return (
-    // <>
-    //   <p>men's</p>
-    //   <ul>{itemType}</ul>
-    //   {/* <ul>{description}</ul> */}
-    // </>
     <div className="container">
-      {/* <h5>Men's Products</h5> */}
       <div className='product-page-copy-container'>
         <h3 className='product-page-copy-header'>Men's Cycling Jerseys</h3>
         <p className='product-page-copy-text'>
@@ -52,15 +32,12 @@ export default function MensProducts() {
 }
 
 function Product({ product }) {
-  const { name, url, type, description, details, price, color } = product;
+  const { name, url, price, color } = product;
   return (
     <div className='row'>
-      {/* TODO: Instead of a div, the above should link to `/details/:productId` */}
        <div className="card-body">
         <img src={url} alt='product'/>
-        <p className="card-title">{name}</p>
-        {/* <h5 className="card-title">{type}</h5> */}
-        {/* <h5 className="card-title">{description}</h5> */}
+        <p className="card-title item-name">{name}</p>
         <p className="card-title">{color}</p>
         <p className="card-title">${price}</p>
       </div>

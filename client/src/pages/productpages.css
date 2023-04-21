@@ -1,6 +1,5 @@
 .card-body {
   width: 50%;
-  /* margin: 0; */
   padding: 2px;
 }
 
@@ -9,8 +8,9 @@
 }
 
 .card-body p {
-  line-height: 1;
+  line-height: .8;
   margin-left: 2px;
+  margin-top: 10px;
 }
 
 .product-page-copy-header {
@@ -28,6 +28,10 @@
   padding: 0 40px 0 40px;
 }
 
-/* .product-page-copy-container {
-  width: 150px;
-} */
+.item-name {
+  font-weight: bold;
+}
+
+.card-title {
+  font-size: 14px;
+}

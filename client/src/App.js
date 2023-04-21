@@ -9,9 +9,7 @@ import ShoppingCart from './pages/Shopping-cart';
 import NotFound from './pages/NotFound';
 
 function App() {
-
   return (
-    <>
     <div className='container'>
       <Navbar />
       <Routes>
@@ -22,39 +20,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
-    </>
   );
 }
 
 export default App;
-
-
-
-// //////////////////////////// the code below is for use/examples for later issues
-// function App() {
-//   const [serverData, setServerData] = useState("");
-
-//   useEffect(() => {
-//     async function getServerData() {
-//       const resp = await fetch('/api/hello');
-//       const data = await resp.json();
-
-//       console.log('Data from server:', data);
-
-//       setServerData(data.message);
-//     }
-
-//     getServerData();
-//   }, []);
-
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <h1>{serverData}</h1>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
