@@ -22,8 +22,52 @@ app.use(express.static(reactStaticDir));
 app.use(express.static(uploadsStaticDir));
 app.use(express.json());
 
-app.get('/api/hello', (req, res) => {
-  res.json({ message: 'Hello World!' });
+// app.get('/api/hello', (req, res) => {
+//   res.json({ message: 'Hello World!' });
+// });
+
+app.get('/api/mensproducts', async (req, res, next) => {
+  try {
+    const sql = `
+      select "type",
+            "gender",
+            "name",
+            "description",
+            "details",
+            "price",
+            "color",
+            "url"
+        from "products"
+        where "gender" = 'm'
+    `;
+    const products = await db.query(sql);
+    // res.json(products.rows[0].color);
+    res.json(products.rows);
+  } catch (err) {
+    next(err);
+  }
+});
+
+app.get('/api/womensproducts', async (req, res, next) => {
+  try {
+    const sql = `
+      select "type",
+            "gender",
+            "name",
+            "description",
+            "details",
+            "price",
+            "color",
+            "url"
+        from "products"
+        where "gender" = 'w'
+    `;
+    const products = await db.query(sql);
+    // res.json(products.rows[0].color);
+    res.json(products.rows);
+  } catch (err) {
+    next(err);
+  }
 });
 
 app.use(errorMiddleware);
