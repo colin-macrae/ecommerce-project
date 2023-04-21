@@ -44,7 +44,7 @@ export default function ProductDetails() {
     );
   }
   if (!product) return null;
-  const { name, imageUrl, shortDescription, longDescription } = product;
+  const { name, url } = product;
   return (
     <div className="container">
       <div className="card shadow-sm">
@@ -59,17 +59,17 @@ export default function ProductDetails() {
           </div>
           <div className="row mb-4">
             <div className="col-12 col-sm-6 col-md-5">
-              <img src={imageUrl} alt={name} className="image" />
+              <img src={url} alt={name} className="image" />
             </div>
             <div className="col-12 col-sm-6 col-md-7">
               <h2>{name}</h2>
 
-              <p>{shortDescription}</p>
+              {/* <p>{shortDescription}</p> */}
             </div>
           </div>
           <div className="row">
             <div className="col">
-              <p className="long-description">{longDescription}</p>
+              {/* <p className="long-description">{longDescription}</p> */}
             </div>
           </div>
         </div>
