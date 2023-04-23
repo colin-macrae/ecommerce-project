@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './productpages.css'
+import { Link } from 'react-router-dom';
 
 export default function WomensProducts() {
   const [serverData, setServerData] = useState([]);
@@ -32,8 +33,9 @@ export default function WomensProducts() {
 }
 
 function Product({ product }) {
-  const { name, url, price, color } = product;
+  const { name, url, price, color, productId } = product;
   return (
+    <Link to={`/productdetails/${productId}`}>
     <div className='row'>
       <div className="card-body">
         <img src={url} alt='product' />
@@ -42,5 +44,6 @@ function Product({ product }) {
         <p className="card-title">${price}</p>
       </div>
     </div>
+    </Link>
   );
 }

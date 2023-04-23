@@ -37,7 +37,6 @@ function Product({ product }) {
   const { name, url, price, color, productId } = product;
   return (
     <Link to={`/productdetails/${productId}`}>
-    {/* // <Link to={`/mensproducts`}> */}
       <div className='row'>
         <div className="card-body">
           <img src={url} alt='product' />

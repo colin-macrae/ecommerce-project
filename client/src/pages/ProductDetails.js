@@ -1,18 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-// import { fetchProduct, toDollars } from '../lib';
-// import './ProductDetails.css';
-import { Link } from 'react-router-dom';
+import './ProductDetails.css'
 
 async function fetchProduct(productId) {
   const res = await fetch((`/api/products/${productId}`));
   if (!res.ok) throw new Error(`fetch Error ${res.status}`);
   return await res.json();
 }
-
-// function toDollars(value) {
-//   return '$' + (value / 100).toFixed(2);
-// }
 
 export default function ProductDetails() {
   const { productId } = useParams();
@@ -44,35 +38,33 @@ export default function ProductDetails() {
     );
   }
   if (!product) return null;
-  const { name, url } = product;
-  return (
-    <div className="container">
-      <div className="card shadow-sm">
-        <div className="card-body">
-          <div className="row">
-            <div className="col">
-              <Link className="btn text-secondary" to="/">
-                {/* TODO: Instead of a div, the above should link to `/` */}
-                &lt; Back to catalog
-              </Link>
-            </div>
-          </div>
-          <div className="row mb-4">
-            <div className="col-12 col-sm-6 col-md-5">
-              <img src={url} alt={name} className="image" />
-            </div>
-            <div className="col-12 col-sm-6 col-md-7">
-              <h2>{name}</h2>
+  const { name, url, description, color } = product;
 
-              {/* <p>{shortDescription}</p> */}
+  return (
+    <div className="container prod-details-container">
+      <div className="row">
+          <div className="col-12 col-md-6 col-lg-6">
+              <img src={url} alt={name} className="image" />
+          </div>
+          <div className="col-12 col-md-6 col-lg-6">
+            <div>
+              <h5>{name}</h5>
+              <p>{color}</p>
+              <p>{description}</p>
+              <ul>
+                <li>Relaxed fit</li>
+                <li>High wicking and quick drying fabrics</li>
+                <li>Fully-dyed fabric</li>
+                <li>Guarded zip ends</li>
+                <li>Zippered side pocket with protected insert</li>
+                <li>Robust YKK zipper with semi auto-lock puller</li>
+                <li>Fabric: 86% Polyester, 14% Elastane</li>
+              </ul>
+              <div className='button-div'>
+                <button>ADD TO CART</button>
+              </div>
             </div>
           </div>
-          <div className="row">
-            <div className="col">
-              {/* <p className="long-description">{longDescription}</p> */}
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

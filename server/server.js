@@ -23,10 +23,6 @@ app.use(express.static(reactStaticDir));
 app.use(express.static(uploadsStaticDir));
 app.use(express.json());
 
-// app.get('/api/hello', (req, res) => {
-//   res.json({ message: 'Hello World!' });
-// });
-
 app.get('/api/mensproducts', async (req, res, next) => {
   try {
     const sql = `
@@ -97,7 +93,6 @@ app.get('/api/products/:productId', async (req, res, next) => {
     if (!product.rows[0]) {
       throw new ClientError(404, `cannot find product with productId ${productId}`);
     }
-    // res.json(products.rows[0].color);
     res.json(product.rows[0]);
   } catch (err) {
     next(err);

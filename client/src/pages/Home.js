@@ -16,7 +16,6 @@ export default function Home() {
           <Link to="/mensproducts">
             <button>MEN</button>
           </Link>
-
         </div>
         <div className='home-pic-women'>
           <Link to="/womensproducts">
@@ -24,8 +23,6 @@ export default function Home() {
           </Link>
         </div>
       </div>
-
     </>
-
   )
 }
