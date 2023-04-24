@@ -1,0 +1,27 @@
+.prod-details-container img {
+  width: 100%;
+}
+
+.prod-details-container h5 {
+  margin-top: 15px;
+}
+
+.prod-details-container ul, .prod-details-container p  {
+  font-size: 12px;
+}
+
+.button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-div button {
+  background-color: black;
+  border: none;
+  color: white;
+  font-size: 12px;
+  width: 250px;
+  height: 30px;
+  margin: 30px 0 60px;
+}

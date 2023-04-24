@@ -1,17 +1,19 @@
 import { useEffect, useState } from 'react';
 import './productpages.css'
+import { Link } from 'react-router-dom';
 
 export default function MensProducts() {
   const [serverData, setServerData] = useState([]);
 
-    useEffect(() => {
+  useEffect(() => {
     async function getServerData() {
       const resp = await fetch('/api/mensproducts');
       const data = await resp.json();
       setServerData(data);
+      console.log(serverData)
     }
     getServerData();
-  }, []);
+  }, [serverData]);
 
   return (
     <div className="container">
@@ -32,15 +34,17 @@ export default function MensProducts() {
 }
 
 function Product({ product }) {
-  const { name, url, price, color } = product;
+  const { name, url, price, color, productId } = product;
   return (
-    <div className='row'>
-       <div className="card-body">
-        <img src={url} alt='product'/>
-        <p className="card-title item-name">{name}</p>
-        <p className="card-title">{color}</p>
-        <p className="card-title">${price}</p>
+    <Link to={`/productdetails/${productId}`}>
+      <div className='row'>
+        <div className="card-body">
+          <img src={url} alt='product' />
+          <p className="card-title item-name">{name}</p>
+          <p className="card-title">{color}</p>
+          <p className="card-title">${price}</p>
+        </div>
       </div>
-    </div>
+    </Link >
   );
 }
