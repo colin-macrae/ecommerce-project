@@ -11,7 +11,7 @@ export default function ShoppingCart() {
         <div>
           <div className='order-lineitem'>
             <p>Subtotal</p>
-            <p className='dollar-amt'>$130</p>
+            <p className='dollar-amt'>${amount}</p>
           </div>
           <div className='order-lineitem'>
             <p>Delivery</p>
@@ -21,7 +21,7 @@ export default function ShoppingCart() {
             <button className='checkout-btn'>
               PROCEED TO CHECKOUT
             </button>
-            </div>
+          </div>
         </div>
       </div>
 
@@ -29,25 +29,45 @@ export default function ShoppingCart() {
   )
 }
 
+const items = JSON.parse(localStorage.getItem('cart'));
+console.log(items)
+
+function subtotal() {
+  let sum = 0;
+  if (items) {
+    for (let i = 0; i < items.length; i++) {
+      sum += Number(items[i].price)
+    }
+    return sum;
+  } else return
+}
+const amount = subtotal()
 
 function CartItems() {
-  return (
-    <div className="row">
+  if (items) {
+    const cartItem = items.map(x =>
+    <div key={x.productId} className = "row" >
       <div className="col-6 col-md-6 col-lg-6">
-        <img src='https://assets.pasnormalstudios.com/391/conversions/Man_Essential-Jerswey_Earth_4-5-pdp-page.jpg?v=1668716956' alt='jersey' className="cart-image" />
+        <img src={x.url} alt='jersey' className="cart-image" />
       </div>
       <div className="col-6 col-md-6 col-lg-6 cart-item-text">
         <div>
           <div className='name-and-price'>
-            <p>Jersey</p>
-            <p className='dollar-amt'>$155.00</p>
+            <p>{x.name}</p>
+            <p className='dollar-amt'>${x.price}</p>
           </div>
-          <p>Green</p>
+          <p>{x.color}</p>
           <div className='remove-button-div'>
             <a href='#'>Remove Item</a>
           </div>
         </div>
       </div>
+    </div >
+    )
+  return (
+    <div>
+      {cartItem}
     </div>
   )
+  } else return <h1 className='cart-header'>Your cart is empty</h1>
 }

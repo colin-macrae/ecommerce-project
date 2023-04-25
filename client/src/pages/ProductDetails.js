@@ -8,6 +8,23 @@ async function fetchProduct(productId) {
   return await res.json();
 }
 
+// create cart file
+// function for get cart contents
+// function for add , and another for remove
+
+function getCart() {
+  let cart = JSON.parse(localStorage.getItem('cart'));
+  if (cart === null) {
+    return [];
+  } else return cart
+}
+
+function addToCart(product) {
+  const cart = getCart()
+  cart.push(product);
+  localStorage.setItem('cart', JSON.stringify(cart))
+}
+
 export default function ProductDetails() {
   const { productId } = useParams();
   const [product, setProduct] = useState();
@@ -61,7 +78,15 @@ export default function ProductDetails() {
                 <li>Fabric: 86% Polyester, 14% Elastane</li>
               </ul>
               <div className='button-div'>
-                <button>ADD TO CART</button>
+                <button
+                onClick={
+                  function () {
+                    addToCart(product);
+                    // window.reload()
+                  }
+                  }>
+                  ADD TO CART
+                </button>
               </div>
             </div>
           </div>
