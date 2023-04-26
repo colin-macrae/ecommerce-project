@@ -23,6 +23,14 @@ function addToCart(product) {
   const cart = getCart()
   cart.push(product);
   localStorage.setItem('cart', JSON.stringify(cart))
+  window.location.reload()
+}
+
+export function removeFromCart(e) {
+  console.log('hello')
+  // console.log(e.Target.productId);
+  localStorage.clear()
+  window.location.reload()
 }
 
 export default function ProductDetails() {
@@ -78,15 +86,14 @@ export default function ProductDetails() {
                 <li>Fabric: 86% Polyester, 14% Elastane</li>
               </ul>
               <div className='button-div'>
-                <button
-                onClick={
-                  function () {
+                <a
+                href='http://localhost:3000/shoppingcart'
+                onClick={function () {
                     addToCart(product);
-                    // window.reload()
                   }
                   }>
                   ADD TO CART
-                </button>
+                </a>
               </div>
             </div>
           </div>
