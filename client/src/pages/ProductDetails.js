@@ -75,8 +75,3 @@ export default function ProductDetails() {
     </div>
   );
 }
-
-//  to be moved ///////////////////////
-// create cart file
-// function for get cart contents
-// function for add , and another for remove

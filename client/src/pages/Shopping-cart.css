@@ -64,3 +64,10 @@
   display: flex;
   justify-content: center;
 }
+
+/* desktop */
+@media (min-width: 700px) {
+  .cart-items-container {
+      width: 40%;
+    }
+}

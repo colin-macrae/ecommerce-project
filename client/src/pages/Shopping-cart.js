@@ -49,7 +49,7 @@ function subtotal() {
 }
 const amount = subtotal()
 
-// functions for manipulating cart //
+// cart manipulation functions //
 export function getCart() {
   let cart = JSON.parse(localStorage.getItem('cart'));
   if (cart === null) {

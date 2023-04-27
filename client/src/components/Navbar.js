@@ -23,7 +23,7 @@ export default function Navbar(){
           </Link>
         </div>
         <div className='nav-col-right one-third'>
-          <Link to="shoppingcart">Cart</Link>
+          <Link to="shoppingcart"><img src='./shopping-cart.png' alt='cart icon'/></Link>
         </div>
       </nav>
       <Outlet/>

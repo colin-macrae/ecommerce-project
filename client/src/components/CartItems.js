@@ -5,7 +5,7 @@ const items = localStorageCart();
 
 export default function CartItems() {
   const cartItem = items.map(x =>
-    <div key={x.productId} className="row" >
+    <div key={x.productId} className="row cart-item-container" >
       <div className="col-6 col-md-6 col-lg-6">
         <img src={x.url} alt='jersey' className="cart-image" />
       </div>

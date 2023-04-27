@@ -1,6 +1,7 @@
 .nav-columns {
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 5px;
 }
 
 .nav-col-left {
@@ -44,6 +45,27 @@ a {
   color:black;
 }
 
-img {
-  margin-top: 15px;
+a img {
+  width: 15px;
+}
+
+.cart-item-container {
+  margin-bottom: 5px;
+}
+
+/* desktop */
+@media (min-width: 700px) {
+  .nav-col-left {
+      font-size: 12px;
+      padding-left: 10px;
+      justify-content: left;
+    }
+
+  .nav-col-left a {
+    padding-right: 30px;
+  }
+
+  a img {
+    width: 20px;
+  }
 }
