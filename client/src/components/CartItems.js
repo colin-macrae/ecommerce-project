@@ -3,6 +3,8 @@ import { removeFromCart, localStorageCart } from '../pages/Shopping-cart.js'
 
 const items = localStorageCart();
 
+
+
 export default function CartItems() {
   const cartItem = items.map(x =>
     <div key={x.productId} className="row cart-item-container" >
@@ -34,3 +36,10 @@ export default function CartItems() {
     </div>
   )
 }
+
+
+// export function cartItemQuantity() {
+//   return items.length;
+// }
+// let crtQty = cartItemQuantity()
+// console.log(crtQty);

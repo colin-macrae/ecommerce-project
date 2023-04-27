@@ -69,3 +69,18 @@ a img {
     width: 20px;
   }
 }
+
+.cart-qty {
+  color: white;
+  position: absolute;
+  right: 5px;
+  bottom: -5px;
+  font-weight: bold;
+  background-color: blue;
+  height: 8px;
+  width: 10px;
+  font-size: 6px;
+  border-radius: 15px;
+  text-align: center;
+  padding-bottom: 8px;
+}

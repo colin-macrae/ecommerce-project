@@ -1,5 +1,6 @@
 import './Shopping-cart.css'
 import CartItems from '../components/CartItems.js';
+// import cartItemQuantity from '../components/CartItems.js';
 
 export default function ShoppingCart() {
     return (
@@ -70,3 +71,7 @@ export function removeFromCart(productId) {
   localStorage.setItem('cart', JSON.stringify(newCart))
   window.location.reload()
 }
+
+// total item quantity in cart //
+// let crtQty = cartItemQuantity()
+// console.log(crtQty)
