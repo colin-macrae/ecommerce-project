@@ -71,7 +71,3 @@ export function removeFromCart(productId) {
   localStorage.setItem('cart', JSON.stringify(newCart))
   window.location.reload()
 }
-
-// total item quantity in cart //
-// let crtQty = cartItemQuantity()
-// console.log(crtQty)

@@ -6,6 +6,8 @@
 .name-and-price p {
   align-items: center;
   padding-top: 10px;
+  font-weight: bold;
+
 }
 
 .cart-item-text {
