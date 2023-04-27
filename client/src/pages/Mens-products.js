@@ -3,6 +3,7 @@ import './productpages.css'
 import { Link } from 'react-router-dom';
 
 export default function MensProducts() {
+  
   const [serverData, setServerData] = useState([]);
 
   useEffect(() => {
@@ -10,7 +11,6 @@ export default function MensProducts() {
       const resp = await fetch('/api/mensproducts');
       const data = await resp.json();
       setServerData(data);
-      console.log(serverData)
     }
     getServerData();
   }, [serverData]);
