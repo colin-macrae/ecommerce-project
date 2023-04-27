@@ -3,7 +3,7 @@ import './productpages.css'
 import { Link } from 'react-router-dom';
 
 export default function MensProducts() {
-  
+
   const [serverData, setServerData] = useState([]);
 
   useEffect(() => {
@@ -25,7 +25,9 @@ export default function MensProducts() {
       <div className="row">
         {serverData?.map((product, index) => (
           <div key={index} className="col-6 col-md-4 col-lg-3">
+
             <Product product={product} />
+            
           </div>
         ))}
       </div>
