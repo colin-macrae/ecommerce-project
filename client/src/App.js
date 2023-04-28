@@ -8,7 +8,6 @@ import ShoppingCart from './pages/Shopping-cart';
 import NotFound from './pages/NotFound';
 import ProductDetails from './pages/ProductDetails';
 
-
 function App() {
   return (
     <div className='container'>

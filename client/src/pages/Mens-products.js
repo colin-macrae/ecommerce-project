@@ -27,7 +27,7 @@ export default function MensProducts() {
           <div key={index} className="col-6 col-md-4 col-lg-3">
 
             <Product product={product} />
-            
+
           </div>
         ))}
       </div>
@@ -47,6 +47,6 @@ function Product({ product }) {
           <p className="card-title">${price}</p>
         </div>
       </div>
-    </Link >
+    </Link>
   );
 }

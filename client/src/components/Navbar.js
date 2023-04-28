@@ -36,12 +36,9 @@ export default function Navbar(){
   )
 }
 
-// get quantity of cart items //
+// get quantity of items in cart //
 const cartItemsArray = localStorageCart();
-
 export function cartQuantity() {
   return cartItemsArray.length;
 }
-
 let cartItemQuantity = cartQuantity()
-console.log(cartItemQuantity);

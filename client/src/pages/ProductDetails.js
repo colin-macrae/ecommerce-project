@@ -3,12 +3,6 @@ import { useParams } from 'react-router-dom';
 import './ProductDetails.css'
 import { addToCart } from './Shopping-cart.js'
 
-async function fetchProduct(productId) {
-  const res = await fetch((`/api/products/${productId}`));
-  if (!res.ok) throw new Error(`fetch Error ${res.status}`);
-  return await res.json();
-}
-
 export default function ProductDetails() {
   const { productId } = useParams();
   const [product, setProduct] = useState();
@@ -74,4 +68,10 @@ export default function ProductDetails() {
       </div>
     </div>
   );
+}
+
+async function fetchProduct(productId) {
+  const res = await fetch((`/api/products/${productId}`));
+  if (!res.ok) throw new Error(`fetch Error ${res.status}`);
+  return await res.json();
 }
