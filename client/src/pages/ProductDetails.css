@@ -6,6 +6,11 @@
   margin-top: 15px;
 }
 
+.details-header {
+  font-size: 16px;
+  font-weight: normal;
+}
+
 .prod-details-container ul, .prod-details-container p  {
   font-size: 12px;
 }
@@ -26,4 +31,12 @@
   margin: 30px 0 60px;
   text-align: center;
   padding-top: 5px;
+}
+
+/* desktop */
+@media (min-width: 700px) {
+  .text-content-container {
+    height: 100%;
+    padding: 0 30px;
+  }
 }
