@@ -24,7 +24,9 @@ export default function WomensProducts() {
       <div className="row">
         {serverData?.map((product, index) => (
           <div key={index} className="col-6 col-md-4 col-lg-3">
+
             <Product product={product} />
+            
           </div>
         ))}
       </div>

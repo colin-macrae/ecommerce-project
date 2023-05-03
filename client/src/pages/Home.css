@@ -55,3 +55,17 @@
 .home-pic-women button:hover {
   background-color: rgb(215, 214, 214);
 }
+
+/* desktop */
+@media (min-width: 700px) {
+  .two-cols-home div {
+      height: 440px;
+    }
+
+  .home-pic-men button,
+  .home-pic-women button {
+    height: 30px;
+    width: 70px;
+    font-size: 14px;
+  }
+}

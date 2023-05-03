@@ -3,6 +3,7 @@ import './productpages.css'
 import { Link } from 'react-router-dom';
 
 export default function MensProducts() {
+
   const [serverData, setServerData] = useState([]);
 
   useEffect(() => {
@@ -10,7 +11,6 @@ export default function MensProducts() {
       const resp = await fetch('/api/mensproducts');
       const data = await resp.json();
       setServerData(data);
-      console.log(serverData)
     }
     getServerData();
   }, [serverData]);
@@ -25,7 +25,9 @@ export default function MensProducts() {
       <div className="row">
         {serverData?.map((product, index) => (
           <div key={index} className="col-6 col-md-4 col-lg-3">
+
             <Product product={product} />
+
           </div>
         ))}
       </div>
@@ -45,6 +47,6 @@ function Product({ product }) {
           <p className="card-title">${price}</p>
         </div>
       </div>
-    </Link >
+    </Link>
   );
 }
