@@ -1,7 +1,5 @@
 import './Shopping-cart.css'
 import CartItems from '../components/CartItems.js';
-// import cartQuantity from '../components/Navbar.js';
-// console.log(cartQuantity())
 
 export default function ShoppingCart() {
   if (cartItemsQuantity > 0) {
@@ -55,9 +53,6 @@ export default function ShoppingCart() {
     )
   }
 }
-
-// const numberItems = localStorageCart()
-// const qty = numberItems.length
 
 // grab all items from local storage //
 export function localStorageCart() {
