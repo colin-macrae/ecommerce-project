@@ -67,6 +67,11 @@
   justify-content: center;
 }
 
+.empty-cart {
+  text-align: center;
+  margin-top: 30px;
+}
+
 /* desktop */
 @media (min-width: 700px) {
   .cart-items-container {
