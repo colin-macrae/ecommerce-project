@@ -1,12 +1,12 @@
 import { Outlet, Link } from 'react-router-dom';
 import './Navbar.css'
-import { localStorageCart } from '../pages/Shopping-cart.js'
+import { getCart } from '../pages/Shopping-cart.js'
 
-export default function Navbar(){
+export default function Navbar() {
   if (cartItemsQuantity > 0) {
     return (
       <>
-        <nav className="navbar nav-columns">
+        <nav className=" nav-columns">
           <div className='nav-col-left one-third'>
             <Link to="/mensproducts">Shop Men</Link>
             <Link to="/womensproducts">Shop Women</Link>
@@ -25,7 +25,7 @@ export default function Navbar(){
             </Link>
           </div>
           <div className='nav-col-right one-third'>
-            <Link to="shoppingcart"><img src='./shopping-cart.png' alt='cart icon' /></Link>
+            <Link to="shoppingcart"><img src='https://www.freepnglogos.com/uploads/shopping-cart-png/shopping-cart-svg-png-icon-download-28.png' /></Link>
 
             {/* cart items quantity displayed */}
             <p className='cart-qty'>
@@ -59,18 +59,18 @@ export default function Navbar(){
           </Link>
         </div>
         <div className='nav-col-right one-third'>
-          <Link to="shoppingcart"><img src='./shopping-cart.png' alt='cart icon'/></Link>
+          <Link to="shoppingcart"><img src='./shopping-cart.png' alt='cart icon' /></Link>
           {/* Cart items quantity removed */}
         </div>
 
       </nav>
-      <Outlet/>
+      <Outlet />
     </>
   )
 }
 
 // get quantity of items in cart //
-const cartItemsArray = localStorageCart();
+const cartItemsArray = getCart();
 export function cartQuantity() {
   return cartItemsArray.length;
 }

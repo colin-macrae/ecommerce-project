@@ -1,7 +1,7 @@
 import '../pages/Shopping-cart.js'
-import { removeFromCart, localStorageCart } from '../pages/Shopping-cart.js'
+import { removeFromCart, getCart } from '../pages/Shopping-cart.js'
 
-const items = localStorageCart();
+const items = getCart();
 
 export default function CartItems() {
   const cartItem = items.map(x =>
