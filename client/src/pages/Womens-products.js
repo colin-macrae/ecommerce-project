@@ -15,7 +15,7 @@ export default function WomensProducts() {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container products-container">
       <div className='product-page-copy-container'>
         <h3 className='product-page-copy-header'>Women's Cycling Jerseys</h3>
         <p className='product-page-copy-text'>
@@ -26,7 +26,7 @@ export default function WomensProducts() {
           <div key={index} className="col-6 col-md-4 col-lg-3">
 
             <Product product={product} />
-            
+
           </div>
         ))}
       </div>

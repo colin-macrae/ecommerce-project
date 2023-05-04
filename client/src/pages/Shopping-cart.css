@@ -44,12 +44,14 @@
 
 .cart-items-container {
   width: 80%;
+  margin-top:70px;
 }
 
 .cart-header {
   text-align: center;
   font-size: 18px;
   margin-top: 15px;
+  margin-bottom: 20px;
 }
 
 .checkout-btn {

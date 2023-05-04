@@ -60,6 +60,10 @@
   background-color: rgb(215, 214, 214);
 }
 
+.home-container {
+  margin-top: 57px;
+}
+
 /* desktop */
 @media (min-width: 700px) {
   .two-cols-home div {

@@ -6,7 +6,7 @@ export default function Navbar(){
   if (cartItemsQuantity > 0) {
     return (
       <>
-        <nav className="navbar nav-columns">
+        <nav className=" nav-columns">
           <div className='nav-col-left one-third'>
             <Link to="/mensproducts">Shop Men</Link>
             <Link to="/womensproducts">Shop Women</Link>

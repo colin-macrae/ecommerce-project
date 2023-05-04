@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
-    <>
+    <div className='home-container'>
       <img className='home-image'src='https://cdn.velonews.com/wp-content/uploads/2022/12/Copy-of-spectrum-vest-front.jpg?width=730' alt='woman standing with bike'/>
       <div className='home-text'>
         <h2>INSPIRE ME</h2>
@@ -29,6 +29,6 @@ export default function Home() {
           The best cycling jerseys in the world, made with the iconic designs and fabrics of our premium line.
         </p>
       </div>
-    </>
+    </div>
   )
 }
