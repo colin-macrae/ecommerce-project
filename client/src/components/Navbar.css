@@ -4,6 +4,16 @@
   margin-bottom: 5px;
 }
 
+/* to work on navbar fixed, try deleting navbar as a class in Navbar component, and try the following css
+.nav-columns {
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 5px;
+  position: fixed;
+  left: 0;
+  background-color: white;
+} */
+
 .nav-col-left {
   font-size: 9px;
   text-decoration: none;
