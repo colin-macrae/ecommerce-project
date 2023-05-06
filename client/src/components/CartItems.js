@@ -11,13 +11,17 @@ const [currentCart, setCurrentCart] = useState(getCart());
   useEffect(() => {
     function getCart() {
     let cart = JSON.parse(localStorage.getItem('cart'));
-    if (cart === null) {
-      return [];
-    } else return cart
+    if (cart) {
       setCurrentCart(cart);
+    }
     }
     getCart()
   }, []);
+
+  function cartQuantity() {
+    return currentCart.length
+  }
+  console.log(cartQuantity())
 
   const cartItem = currentCart.map(x =>
     <div key={x.productId} className="row cart-item-container" >
