@@ -69,14 +69,14 @@ export function addToCart(product) {
   const cart = items
   cart.push(product);
   localStorage.setItem('cart', JSON.stringify(cart))
-  window.location.reload()
+  // window.location.reload()
 }
 
 export function removeFromCart(productId) {
   let cart = items
   const newCart = cart.filter((item) => item.productId !== productId)
   localStorage.setItem('cart', JSON.stringify(newCart))
-  window.location.reload()
+  // window.location.reload()
 }
 
 // total all item prices in cart //
