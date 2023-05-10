@@ -11,6 +11,10 @@
   color: grey;
 }
 
+.home-text-2 {
+  background-color: rgb(218, 218, 218);
+}
+
 .home-text p {
   font-size: 14px;
 }
@@ -35,7 +39,8 @@
   background-image: url("https://www.santinicycling.com/modules/custombanners/views/img/uploads/affc101e45672562731753377c77db5c37b557f6.jpg");
 }
 
-.home-pic-men, .home-pic-women {
+.home-pic-men,
+.home-pic-women {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,11 +61,15 @@
   background-color: rgb(215, 214, 214);
 }
 
+.home-container {
+  margin-top: 57px;
+}
+
 /* desktop */
 @media (min-width: 700px) {
   .two-cols-home div {
-      height: 440px;
-    }
+    height: 440px;
+  }
 
   .home-pic-men button,
   .home-pic-women button {

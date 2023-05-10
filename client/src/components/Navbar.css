@@ -1,7 +1,23 @@
-.nav-columns {
+/* .nav-columns {
   justify-content: space-between;
   width: 100%;
   margin-bottom: 5px;
+} */
+
+/* to work on navbar fixed, try deleting navbar as a class in Navbar component, and try the following css */
+.nav-columns {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 5px;
+  position: fixed;
+  left: 0;
+  background-color: white;
+  height: 50px;
+  align-items: center;
+  top: 0;
+  border-bottom: 1px rgb(194, 194, 194) solid;
 }
 
 .nav-col-left {
@@ -42,7 +58,7 @@
 
 a {
   text-decoration: none;
-  color:black;
+  color: black;
 }
 
 a img {

@@ -33,7 +33,7 @@ export default function ProductDetails() {
     );
   }
   if (!product) return null;
-  const { name, url, description, color } = product;
+  const { name, url, description, color, details } = product;
 
   return (
     <div className="container prod-details-container">
@@ -42,24 +42,17 @@ export default function ProductDetails() {
           <img src={url} alt={name} className="image" />
         </div>
         <div className="col-12 col-md-6 col-lg-6">
-          <div>
+          <div className='text-content-container'>
             <h5>{name}</h5>
             <p>{color}</p>
             <p>{description}</p>
-            <ul>
-              <li>Relaxed fit</li>
-              <li>High wicking and quick drying fabrics</li>
-              <li>Fully-dyed fabric</li>
-              <li>Guarded zip ends</li>
-              <li>Zippered side pocket with protected insert</li>
-              <li>Robust YKK zipper with semi auto-lock puller</li>
-              <li>Fabric: 86% Polyester, 14% Elastane</li>
-            </ul>
+            <h5 className='details-header'>Details</h5>
+            <p>{details}</p>
             <div className='button-div'>
               <a
-                href='http://localhost:3000/shoppingcart'
+                href='#'
                 onClick={() => addToCart(product)}
-                >
+              >
                 ADD TO CART
               </a>
             </div>

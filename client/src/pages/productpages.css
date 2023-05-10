@@ -22,7 +22,8 @@
   font-size: 12px;
 }
 
-.product-page-copy-header, .product-page-copy-text {
+.product-page-copy-header,
+.product-page-copy-text {
   color: rgb(60, 60, 60);
   text-align: center;
   padding: 0 40px 0 40px;
@@ -34,4 +35,8 @@
 
 .card-title {
   font-size: 14px;
+}
+
+.products-container {
+  padding-top: 50px;
 }

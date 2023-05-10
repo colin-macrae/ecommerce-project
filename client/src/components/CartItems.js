@@ -1,10 +1,29 @@
 import '../pages/Shopping-cart.js'
-import { removeFromCart, localStorageCart } from '../pages/Shopping-cart.js'
-
-const items = localStorageCart();
+import { removeFromCart } from '../pages/Shopping-cart.js'
+import { useState, useEffect } from 'react'
+import { getCart } from '../pages/Shopping-cart.js';
 
 export default function CartItems() {
-  const cartItem = items.map(x =>
+const [currentCart, setCurrentCart] = useState(getCart());
+
+  useEffect(() => {
+    function getCart() {
+    let cart = JSON.parse(localStorage.getItem('cart'));
+      if (cart === null) {
+        return []
+      } else {
+        return setCurrentCart(cart);
+      }
+    }
+    getCart()
+  }, []);
+
+  function cartQuantity() {
+    return currentCart.length
+  }
+  console.log(cartQuantity())
+
+  const cartItem = currentCart.map(x =>
     <div key={x.productId} className="row cart-item-container" >
       <div className="col-6 col-md-6 col-lg-6">
         <img src={x.url} alt='jersey' className="cart-image" />

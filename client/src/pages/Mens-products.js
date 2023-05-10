@@ -16,7 +16,7 @@ export default function MensProducts() {
   }, [serverData]);
 
   return (
-    <div className="container">
+    <div className="container products-container">
       <div className='product-page-copy-container'>
         <h3 className='product-page-copy-header'>Men's Cycling Jerseys</h3>
         <p className='product-page-copy-text'>
