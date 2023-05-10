@@ -3,17 +3,17 @@ import { removeFromCart } from '../pages/Shopping-cart.js'
 import { useState, useEffect } from 'react'
 import { getCart } from '../pages/Shopping-cart.js';
 
-// const items = getCart();
-
 export default function CartItems() {
 const [currentCart, setCurrentCart] = useState(getCart());
 
   useEffect(() => {
     function getCart() {
     let cart = JSON.parse(localStorage.getItem('cart'));
-    if (cart) {
-      setCurrentCart(cart);
-    }
+      if (cart === null) {
+        return []
+      } else {
+        return setCurrentCart(cart);
+      }
     }
     getCart()
   }, []);

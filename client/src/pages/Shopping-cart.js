@@ -33,7 +33,7 @@ export default function ShoppingCart() {
       <div className="container prod-details-container cart-items-container">
         <h1 className='cart-header'>Cart</h1>
 
-        <p className='empty-cart'>There are currently no items in your cart</p>
+        <p className='empty-cart'>Your cart is empty</p>
 
         <div className='order-tally'>
           <div>
@@ -69,14 +69,13 @@ export function addToCart(product) {
   const cart = items
   cart.push(product);
   localStorage.setItem('cart', JSON.stringify(cart))
-  // window.location.reload()
+  window.location.reload()
 }
 
 export function removeFromCart(productId) {
   let cart = items
   const newCart = cart.filter((item) => item.productId !== productId)
   localStorage.setItem('cart', JSON.stringify(newCart))
-  // window.location.reload()
 }
 
 // total all item prices in cart //

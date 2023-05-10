@@ -51,7 +51,6 @@ export default function ProductDetails() {
             <div className='button-div'>
               <a
                 href='#'
-                // http://localhost:3000/shoppingcart
                 onClick={() => addToCart(product)}
               >
                 ADD TO CART
