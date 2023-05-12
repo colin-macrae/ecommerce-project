@@ -1,9 +1,3 @@
-/* .nav-columns {
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 5px;
-} */
-
 /* to work on navbar fixed, try deleting navbar as a class in Navbar component, and try the following css */
 .nav-columns {
   z-index: 1;
@@ -82,7 +76,6 @@ a img {
   border-radius: 15px;
   text-align: center;
 }
-
 
 /* desktop */
 @media (min-width: 700px) {
