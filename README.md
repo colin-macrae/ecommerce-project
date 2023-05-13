@@ -1,4 +1,4 @@
-# final-project
+<!-- # final-project
 
 A full stack JavaScript solo project.
 
@@ -129,4 +129,51 @@ Below is an explanation of all included `npm` commands in the root `package.json
 
 ## Deployment
 
-Once you are ready, deployment instructions can be found [HERE](https://lms.learningfuze.com/code-guides/Learning-Fuze/curriculum/heroku-deployment)
+Once you are ready, deployment instructions can be found [HERE](https://lms.learningfuze.com/code-guides/Learning-Fuze/curriculum/heroku-deployment) -->
+
+
+
+
+# Pinocelli Cycling Apparel
+A full stack ecommerce web application for cyclists, for the purchase of premium cycling apparel
+
+This project was done for educational purposes, to implement all the knowledge I (Colin) had accumulated in the prevous weeks at an accelearated web development learning program called LearningFuze.
+
+I chose this specific project for the following reasons:
+- I could build my first full-stack project
+- I could more easily envision the project, compared to other ideas, from beginning to end, which gave me more confidence as I planned and built it
+- I have a passion for cycling
+- I knew I could make something aesthetically pleasing with initial images I found during ideation, which I used in the project
+- People could easily understand it
+
+Live link: Will be added when it's available upon deployment
+
+
+![65416564654](https://github.com/colin-macrae/ecommerce-project/assets/122063836/795ad919-5152-465a-bb03-937c211f1285)
+
+## Technologies
+- React.js
+- JavaScript (ES5)
+- HTML5
+- CSS3
+- Bootstrap
+- Node.js
+- Express.js
+- PostgreSQL
+- SQL
+- Flexbox
+- Git
+- GitHub
+- VS Code
+- Chrome Dev Tools
+- Figma
+
+## Potential stretch features
+- User can log in/log out
+- User can choose size and color
+- User can checkout (enter shipping details and pay (stripe)
+
+
+<!-- ## Requirements for developers
+
+## Instructions for getting started -->
