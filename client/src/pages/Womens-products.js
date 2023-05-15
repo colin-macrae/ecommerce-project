@@ -4,15 +4,34 @@ import { Link } from 'react-router-dom';
 
 export default function WomensProducts() {
   const [serverData, setServerData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState();
 
   useEffect(() => {
     async function getServerData() {
-      const resp = await fetch('/api/womensproducts');
-      const data = await resp.json();
-      setServerData(data);
+      try {
+        const resp = await fetch('/api/womensproducts');
+        const data = await resp.json();
+        setServerData(data);
+      }
+      catch (err) {
+        setError(err);
+      } finally {
+        setIsLoading(false)
+      }
     }
     getServerData();
-  }, []);
+  }, [serverData]);
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) {
+    return (
+      <div>
+        Error Loading : {error.message}
+      </div>
+    );
+  }
+  if (!serverData) return null;
 
   return (
     <div className="container products-container">
