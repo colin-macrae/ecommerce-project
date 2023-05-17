@@ -1,4 +1,3 @@
-/* to work on navbar fixed, try deleting navbar as a class in Navbar component, and try the following css */
 .nav-columns {
   z-index: 1;
   display: flex;
@@ -12,6 +11,7 @@
   align-items: center;
   top: 0;
   border-bottom: 1px rgb(194, 194, 194) solid;
+  padding: 0 7px;
 }
 
 .nav-col-left {
@@ -66,7 +66,7 @@ a img {
 .cart-qty {
   color: white;
   position: absolute;
-  right: 2px;
+  right: 8px;
   bottom: -8px;
   font-weight: bold;
   background-color: rgb(43, 96, 218);
@@ -78,7 +78,7 @@ a img {
 }
 
 /* desktop */
-@media (min-width: 700px) {
+@media (min-width: 760px) {
   .nav-col-left {
     font-size: 12px;
     padding-left: 10px;
@@ -94,12 +94,26 @@ a img {
   }
 
   .cart-qty {
-    right: 5px;
+    right: 10%;
     bottom: -5px;
     height: 12px;
     width: 12px;
     font-size: 9px;
     border-radius: 15px;
     padding-bottom: 8px;
+  }
+
+  .nav-columns {
+    padding: 0 10%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav-columns {
+    padding: 0 15%;
+  }
+
+  .cart-qty {
+    right: 15%;
   }
 }

@@ -6,7 +6,7 @@ export default function Navbar() {
   if (cartItemsQuantity > 0) {
     return (
       <>
-        <nav className=" nav-columns">
+        <nav className="nav-columns">
           <div className='nav-col-left one-third'>
             <Link to="/mensproducts">Shop Men</Link>
             <Link to="/womensproducts">Shop Women</Link>
@@ -20,7 +20,7 @@ export default function Navbar() {
                 Studios
               </p>
               <p className='premium-cycling-wear'>
-                PREMIUM CYCLING WEAR
+                PREMIUM CYCLING APPAREL
               </p>
             </Link>
           </div>
@@ -33,7 +33,6 @@ export default function Navbar() {
             </p>
 
           </div>
-
         </nav>
         <Outlet />
       </>
@@ -54,7 +53,7 @@ export default function Navbar() {
               Studios
             </p>
             <p className='premium-cycling-wear'>
-              PREMIUM CYCLING WEAR
+              PREMIUM CYCLING APPAREL
             </p>
           </Link>
         </div>

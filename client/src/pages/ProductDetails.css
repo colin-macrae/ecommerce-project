@@ -38,6 +38,10 @@
 @media (min-width: 700px) {
   .text-content-container {
     height: 100%;
-    padding: 0 30px;
+    padding: 70px 30px;
+  }
+
+  .prod-details-container img {
+    margin-top: 80px;
   }
 }
