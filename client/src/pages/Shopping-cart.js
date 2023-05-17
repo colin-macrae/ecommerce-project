@@ -4,7 +4,7 @@ import CartItems from '../components/CartItems.js';
 export default function ShoppingCart() {
   if (cartItemsQuantity > 0) {
     return (
-      <div className="container prod-details-container cart-items-container">
+      <div className="container  cart-items-container">
         <h1 className='cart-header'>Cart</h1>
 
         <CartItems />
@@ -30,7 +30,7 @@ export default function ShoppingCart() {
     )
   } else {
     return (
-      <div className="container prod-details-container cart-items-container">
+      <div className="container  cart-items-container">
         <h1 className='cart-header'>Cart</h1>
 
         <p className='empty-cart'>Your cart is empty</p>
@@ -76,6 +76,7 @@ export function removeFromCart(productId) {
   let cart = items
   const newCart = cart.filter((item) => item.productId !== productId)
   localStorage.setItem('cart', JSON.stringify(newCart))
+  window.location.reload()
 }
 
 // total all item prices in cart //
