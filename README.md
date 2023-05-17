@@ -137,16 +137,16 @@ Once you are ready, deployment instructions can be found [HERE](https://lms.lear
 # Pinocelli Cycling Apparel
 A full stack ecommerce web application for cyclists, for the purchase of premium cycling apparel
 
-This project was done for educational purposes, to implement all the knowledge I (Colin) had accumulated in the prevous weeks at an accelearated web development learning program called LearningFuze.
+This project was done for educational purposes, to incorporate the knowledge I (Colin) had accumulated in the prevous weeks.
 
 I chose this specific project for the following reasons:
 - I could build my first full-stack project
 - I could more easily envision the project, compared to other ideas, from beginning to end, which gave me more confidence as I planned and built it
 - I have a passion for cycling
-- I knew I could make something aesthetically pleasing with initial images I found during ideation, which I used in the project
+- I knew I could make something aesthetically pleasing with images I found during ideation
 - People could easily understand it
 
-Live link: Will be added when it's available upon deployment
+Live link: https://pinocelli-app.azurewebsites.net/
 
 
 ![65416564654](https://github.com/colin-macrae/ecommerce-project/assets/122063836/795ad919-5152-465a-bb03-937c211f1285)
