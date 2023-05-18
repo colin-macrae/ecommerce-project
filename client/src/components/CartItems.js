@@ -18,11 +18,6 @@ const [currentCart, setCurrentCart] = useState(getCart());
     getCart()
   }, []);
 
-  function cartQuantity() {
-    return currentCart.length
-  }
-  console.log(cartQuantity())
-
   const cartItem = currentCart.map(x =>
     <div key={x.productId} className="row cart-item-container" >
       <div className="col-6 col-md-6 col-lg-6 img-container">
