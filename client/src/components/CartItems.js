@@ -25,7 +25,7 @@ const [currentCart, setCurrentCart] = useState(getCart());
 
   const cartItem = currentCart.map(x =>
     <div key={x.productId} className="row cart-item-container" >
-      <div className="col-6 col-md-6 col-lg-6">
+      <div className="col-6 col-md-6 col-lg-6 img-container">
         <img src={x.url} alt='jersey' className="cart-image" />
       </div>
       <div className="col-6 col-md-6 col-lg-6 cart-item-text">
@@ -37,7 +37,7 @@ const [currentCart, setCurrentCart] = useState(getCart());
           <p>{x.color}</p>
           <div className='remove-button-div'>
             <a
-              href='http://localhost:3000/shoppingcart'
+              href='#'
               onClick={() => removeFromCart(x.productId)}
             >
               (-) Remove Item
