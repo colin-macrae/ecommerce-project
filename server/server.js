@@ -39,7 +39,6 @@ app.get('/api/mensproducts', async (req, res, next) => {
         where "gender" = 'm'
     `;
     const products = await db.query(sql);
-    // res.json(products.rows[0].color);
     res.json(products.rows);
   } catch (err) {
     next(err);
@@ -62,7 +61,6 @@ app.get('/api/womensproducts', async (req, res, next) => {
         where "gender" = 'w'
     `;
     const products = await db.query(sql);
-    // res.json(products.rows[0].color);
     res.json(products.rows);
   } catch (err) {
     next(err);
@@ -98,6 +96,8 @@ app.get('/api/products/:productId', async (req, res, next) => {
     next(err);
   }
 });
+
+app.get('*', (req, res) => res.sendFile(`${reactStaticDir}/index.html`));
 
 app.use(errorMiddleware);
 
