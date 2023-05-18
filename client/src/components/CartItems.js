@@ -29,7 +29,7 @@ const [currentCart, setCurrentCart] = useState(getCart());
             <p>{x.name}</p>
             <p className='dollar-amt'>${x.price}</p>
           </div>
-          <p>{x.color}</p>
+          <p className='product-color'>{x.color}</p>
           <div className='remove-button-div'>
             <a
               href='#'
