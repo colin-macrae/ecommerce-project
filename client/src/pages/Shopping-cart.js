@@ -20,7 +20,7 @@ export default function ShoppingCart() {
               <p className='dollar-amt'>FREE</p>
             </div>
             <div className='checkout-btn-container'>
-              <button className='checkout-btn'>
+              <button onClick={noCheckoutAvailable} className='checkout-btn'>
                 PROCEED TO CHECKOUT
               </button>
             </div>
@@ -90,3 +90,8 @@ function subtotal() {
   } else return
 }
 const amount = subtotal()
+
+// cart button alert
+function noCheckoutAvailable() {
+  return alert('Checkout is not available.')
+}

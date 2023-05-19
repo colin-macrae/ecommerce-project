@@ -5,9 +5,14 @@
 
 .name-and-price p {
   align-items: center;
-  padding-top: 10px;
   font-weight: bold;
+  font-size: .7rem;
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
 
+.product-color {
+  font-size: .65rem;
 }
 
 .cart-item-text {
@@ -17,7 +22,7 @@
 .remove-button-div a {
   position: absolute;
   color: grey;
-  font-size: 12px;
+  font-size: .6rem;
   right: 10px;
   bottom: 10px;
 }
@@ -31,6 +36,7 @@
   justify-content: space-between;
   border-bottom: rgb(172, 172, 172) solid 1px;
   margin-top: 15px;
+  font-size: .7rem;
 }
 
 .order-tally {
@@ -73,8 +79,6 @@
   text-align: center;
   margin-top: 30px;
 }
-
-
 
 /* desktop */
 @media (min-width: 990px) {
