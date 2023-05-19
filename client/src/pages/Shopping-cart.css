@@ -7,10 +7,12 @@
   align-items: center;
   font-weight: bold;
   font-size: .7rem;
+  margin-bottom: 5px;
+  line-height: 1.2;
 }
 
 .product-color {
-  font-size: .7rem;
+  font-size: .65rem;
 }
 
 .cart-item-text {
