@@ -6,9 +6,7 @@ export default function ShoppingCart() {
     return (
       <div className="container  cart-items-container">
         <h1 className='cart-header'>Cart</h1>
-
         <CartItems />
-
         <div className='order-tally'>
           <div>
             <div className='order-lineitem'>
@@ -32,9 +30,7 @@ export default function ShoppingCart() {
     return (
       <div className="container  cart-items-container">
         <h1 className='cart-header'>Cart</h1>
-
         <p className='empty-cart'>Your cart is empty</p>
-
         <div className='order-tally'>
           <div>
             <div className='order-lineitem'>
@@ -98,7 +94,7 @@ function subtotal() {
 }
 const amount = subtotal()
 
-// cart button alert
+// cart button alert //
 function noCheckoutAvailable() {
   return alert('Checkout is not available.')
 }
