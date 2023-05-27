@@ -49,12 +49,11 @@ export default function ProductDetails() {
             <h5 className='details-header'>Details</h5>
             <p>{details}</p>
             <div className='button-div'>
-              <a
-                href='#'
+              <button
                 onClick={() => addToCart(product)}
               >
                 ADD TO CART
-              </a>
+              </button>
             </div>
           </div>
         </div>
