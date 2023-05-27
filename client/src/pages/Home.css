@@ -21,13 +21,21 @@
 
 .two-cols-home {
   display: flex;
+  justify-content: space-between;
 }
 
 .two-cols-home div {
   padding: 5px;
   margin-bottom: 10px;
-  width: 50%;
   height: 190px;
+}
+
+a {
+  width: 50%;
+}
+
+a:hover {
+  color: black;
 }
 
 .home-pic-men {

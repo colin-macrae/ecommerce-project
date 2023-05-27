@@ -12,16 +12,16 @@ export default function Home() {
         </p>
       </div>
       <div className='two-cols-home'>
-        <div className='home-pic-men'>
-          <Link to="/mensproducts">
+        <Link to="/mensproducts">
+          <div className='home-pic-men'>
             <button>MEN</button>
-          </Link>
-        </div>
+          </div>
+        </Link>
+        <Link to="/womensproducts">
         <div className='home-pic-women'>
-          <Link to="/womensproducts">
             <button>WOMEN</button>
-          </Link>
         </div>
+        </Link>
       </div>
       <div className='home-text home-text-2'>
         <h4>Jerseys</h4>
