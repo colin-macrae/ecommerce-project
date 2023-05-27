@@ -67,6 +67,13 @@ const cartItemsQuantity = items.length
 
 export function addToCart(product) {
   const cart = items
+  console.log(cart)
+  for (let i = 0; i < cart.length; i++) {
+    if (cart[i].productId === product.productId) {
+      alert('Due to high demand, only a maximum of one of each item may be added to cart.  If you use the obvious loophole, more power to ya!')
+      return
+    }
+  }
   cart.push(product);
   localStorage.setItem('cart', JSON.stringify(cart))
   window.location.reload()
