@@ -11,28 +11,18 @@ export default function Home() {
           Get inspired with our curated selection of road cycling wear designed to provide unrivaled fit, performance, comfort and durability.
         </p>
       </div>
-
-
-
       <div className='two-cols-home'>
-
         <Link to="/mensproducts">
           <div className='home-pic-men'>
             <button>MEN</button>
           </div>
         </Link>
-
         <Link to="/womensproducts">
         <div className='home-pic-women'>
             <button>WOMEN</button>
         </div>
         </Link>
-
       </div>
-
-
-
-      
       <div className='home-text home-text-2'>
         <h4>Jerseys</h4>
         <p>
