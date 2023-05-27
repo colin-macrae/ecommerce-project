@@ -6,9 +6,7 @@ export default function ShoppingCart() {
     return (
       <div className="container  cart-items-container">
         <h1 className='cart-header'>Cart</h1>
-
         <CartItems />
-
         <div className='order-tally'>
           <div>
             <div className='order-lineitem'>
@@ -32,9 +30,7 @@ export default function ShoppingCart() {
     return (
       <div className="container  cart-items-container">
         <h1 className='cart-header'>Cart</h1>
-
         <p className='empty-cart'>Your cart is empty</p>
-
         <div className='order-tally'>
           <div>
             <div className='order-lineitem'>
@@ -67,6 +63,13 @@ const cartItemsQuantity = items.length
 
 export function addToCart(product) {
   const cart = items
+  console.log(cart)
+  for (let i = 0; i < cart.length; i++) {
+    if (cart[i].productId === product.productId) {
+      alert('Due to high demand, only a maximum of one of each item may be added to cart.  If you use the obvious loophole, more power to ya!')
+      return
+    }
+  }
   cart.push(product);
   localStorage.setItem('cart', JSON.stringify(cart))
   window.location.reload()
@@ -91,7 +94,7 @@ function subtotal() {
 }
 const amount = subtotal()
 
-// cart button alert
+// cart button alert //
 function noCheckoutAvailable() {
   return alert('Checkout is not available.')
 }
