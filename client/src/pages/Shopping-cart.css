@@ -12,7 +12,7 @@
 }
 
 .product-color {
-  font-size: .65rem;
+  font-size: .7rem;
 }
 
 .cart-item-text {
@@ -22,9 +22,10 @@
 .remove-button-div a {
   position: absolute;
   color: grey;
-  font-size: .6rem;
-  right: 10px;
+  font-size: .7rem;
+  right: 12px;
   bottom: 10px;
+  width: 60%;
 }
 
 .cart-image {
@@ -65,7 +66,7 @@
   background-color: black;
   border: none;
   margin-top: 20px;
-  font-size: 10px;
+  font-size: 12px;
   width: 200px;
   height: 25px;
 }
