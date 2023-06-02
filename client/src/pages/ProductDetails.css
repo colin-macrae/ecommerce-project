@@ -5,6 +5,7 @@
 
 .prod-details-container h5 {
   margin-top: 15px;
+  margin-bottom: 0;
 }
 
 .details-header {
@@ -14,7 +15,7 @@
 
 .prod-details-container ul,
 .prod-details-container p {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .button-div {
