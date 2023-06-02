@@ -15,7 +15,7 @@
 }
 
 .nav-col-left {
-  font-size: 9px;
+  font-size: 12px;
   text-decoration: none;
   display: flex;
   justify-content: space-between;
@@ -34,8 +34,9 @@
 }
 
 .premium-cycling-wear {
-  font-size: 6px;
+  font-size: 7px;
   margin-top: 3px;
+  font-weight: 500;
 }
 
 .nav-col-center p {

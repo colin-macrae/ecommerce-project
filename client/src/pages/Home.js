@@ -14,12 +14,12 @@ export default function Home() {
       <div className='two-cols-home'>
         <Link to="/mensproducts">
           <div className='home-pic-men'>
-            <button>MEN</button>
+            <button>SHOP MEN</button>
           </div>
         </Link>
         <Link to="/womensproducts">
         <div className='home-pic-women'>
-            <button>WOMEN</button>
+            <button>SHOP WOMEN</button>
         </div>
         </Link>
       </div>

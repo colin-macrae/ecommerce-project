@@ -7,8 +7,8 @@ export default function Navbar() {
       <>
         <nav className="nav-columns">
           <div className='nav-col-left one-third'>
-            <Link to="/mensproducts">Shop Men</Link>
-            <Link to="/womensproducts">Shop Women</Link>
+            <Link to="/mensproducts">Men</Link>
+            <Link to="/womensproducts">Women</Link>
           </div>
           <div className='nav-col-center one-third'>
             <Link to="/">
@@ -19,7 +19,7 @@ export default function Navbar() {
                 Studios
               </p>
               <p className='premium-cycling-wear'>
-                PREMIUM CYCLING APPAREL
+                CYCLING APPAREL
               </p>
             </Link>
           </div>
