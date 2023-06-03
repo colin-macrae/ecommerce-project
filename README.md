@@ -35,4 +35,3 @@ Live link: https://pinocelli-app.azurewebsites.net/
 ## Potential stretch features
 - User can log in/log out
 - User can choose size and color of apparel
-- User can checkout (enter shipping details and pay (stripe))

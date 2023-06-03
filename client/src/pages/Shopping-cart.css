@@ -19,13 +19,16 @@
   position: relative;
 }
 
-.remove-button-div a {
+.remove-button-div button {
   position: absolute;
   color: grey;
   font-size: .7rem;
   right: 12px;
   bottom: 10px;
-  width: 60%;
+  width: 80%;
+  background-color: white;
+  border: none;
+  text-align: right;
 }
 
 .cart-image {
