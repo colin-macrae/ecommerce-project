@@ -31,12 +31,11 @@ const [currentCart, setCurrentCart] = useState(getCart());
           </div>
           <p className='product-color'>{x.color}</p>
           <div className='remove-button-div'>
-            <a
-              href='#'
+            <button
               onClick={() => removeFromCart(x.productId)}
             >
               (-) Remove Item
-            </a>
+            </button>
           </div>
         </div>
       </div>

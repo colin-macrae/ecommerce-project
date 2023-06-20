@@ -66,7 +66,7 @@ export function addToCart(product) {
   console.log(cart)
   for (let i = 0; i < cart.length; i++) {
     if (cart[i].productId === product.productId) {
-      alert('Due to high demand, only a maximum of one of each item may be added to cart.  If you use the obvious loophole, more power to ya!')
+      alert('Due to high demand, only one of each item may be added to cart.')
       return
     }
   }

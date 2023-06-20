@@ -12,19 +12,23 @@
 }
 
 .product-color {
-  font-size: .65rem;
+  font-size: .7rem;
 }
 
 .cart-item-text {
   position: relative;
 }
 
-.remove-button-div a {
+.remove-button-div button {
   position: absolute;
   color: grey;
-  font-size: .6rem;
-  right: 10px;
+  font-size: .7rem;
+  right: 12px;
   bottom: 10px;
+  width: 80%;
+  background-color: white;
+  border: none;
+  text-align: right;
 }
 
 .cart-image {
@@ -65,7 +69,7 @@
   background-color: black;
   border: none;
   margin-top: 20px;
-  font-size: 10px;
+  font-size: 12px;
   width: 200px;
   height: 25px;
 }
