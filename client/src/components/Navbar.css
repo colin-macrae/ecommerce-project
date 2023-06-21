@@ -77,6 +77,10 @@ a img {
   text-align: center;
 }
 
+.fa-cart-shopping {
+  font-size: 14px;
+}
+
 /* desktop */
 @media (min-width: 760px) {
   .nav-col-left {
