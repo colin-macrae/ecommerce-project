@@ -110,6 +110,10 @@ a img {
   .nav-columns {
     padding: 0 10%;
   }
+
+  .fa-cart-shopping {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 1200px) {

@@ -25,7 +25,7 @@ export default function Navbar() {
           </div>
           <div className='nav-col-right one-third'>
             <Link to="shoppingcart">
-              <i class="fa-solid fa-cart-shopping"></i>
+              <i className="fa-solid fa-cart-shopping"></i>
             </Link>
             <QuantityBubble />
           </div>
