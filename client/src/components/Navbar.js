@@ -24,7 +24,9 @@ export default function Navbar() {
             </Link>
           </div>
           <div className='nav-col-right one-third'>
-            <Link to="shoppingcart"><img src='./shopping-cart.png' alt='shopping cart icon'/></Link>
+            <Link to="shoppingcart">
+              <i className="fa-solid fa-cart-shopping"></i>
+            </Link>
             <QuantityBubble />
           </div>
         </nav>

@@ -63,7 +63,6 @@ const cartItemsQuantity = items.length
 
 export function addToCart(product) {
   const cart = items
-  console.log(cart)
   for (let i = 0; i < cart.length; i++) {
     if (cart[i].productId === product.productId) {
       alert('Due to high demand, only one of each item may be added to cart.')

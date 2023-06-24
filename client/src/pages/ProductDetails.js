@@ -12,6 +12,7 @@ export default function ProductDetails() {
   useEffect(() => {
     async function loadProduct(productId) {
       try {
+        setIsLoading(true);
         const product = await fetchProduct(productId);
         setProduct(product);
       } catch (err) {
@@ -20,7 +21,6 @@ export default function ProductDetails() {
         setIsLoading(false);
       }
     }
-    setIsLoading(true);
     loadProduct(productId);
   }, [productId]);
 
