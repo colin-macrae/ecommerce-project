@@ -1,8 +1,3 @@
--- Use SQL insert statements to add any
--- starting/dummy data to your database tables
-
--- EXAMPLE:
-
  insert into "products"
    ("type", "gender", "name", "description", "details", "price", "color", "url")
    values
@@ -76,6 +71,5 @@
      ('jersey', 'w', 'Solitude Jersey', 'Take on the most extreme summer conditions with the new Solitude Jersey. The handstitched jersey is made from a stretch woven fabric, giving it a higher strength-to-weight ratio than today’s traditional knitted fabrics. Our signature PNS pattern has been transformed into an integrated structured surface that is featured across the front and back panels, keeping the jersey from sticking to your skin when worn without a base layer. The raised texture provides countless elevated touchpoints along the inside of the jersey which acts as an internal base layer, allowing moisture to disperse more effectively and thus, keeping you cooler for longer. The resilient sleeves effortlessly stretch into any shape to maintain an aerodynamic advantage. Free from any elastic grippers, we have eliminated all high-friction areas on these raw-edge sleeves, keeping the sleeves completely breathable and maintaining a UPF 50+ protection factor.', 'Relaxed fit / High wicking and quick drying fabrics / Fully-dyed fabric / Guarded zip ends / Zippered side pocket with protected insert / Robust YKK zipper with semi auto-lock puller / Fabric: 86% Polyester, 14% Elastane', 220.00, 'White', 'https://assets.pasnormalstudios.com/8900/conversions/PN_FemaleSolitudeMeshJersey_White-pdp-page.jpg?v=1668717577'),
      ('jersey', 'w', 'Solitude Jersey', 'Take on the most extreme summer conditions with the new Solitude Jersey. The handstitched jersey is made from a stretch woven fabric, giving it a higher strength-to-weight ratio than today’s traditional knitted fabrics. Our signature PNS pattern has been transformed into an integrated structured surface that is featured across the front and back panels, keeping the jersey from sticking to your skin when worn without a base layer. The raised texture provides countless elevated touchpoints along the inside of the jersey which acts as an internal base layer, allowing moisture to disperse more effectively and thus, keeping you cooler for longer. The resilient sleeves effortlessly stretch into any shape to maintain an aerodynamic advantage. Free from any elastic grippers, we have eliminated all high-friction areas on these raw-edge sleeves, keeping the sleeves completely breathable and maintaining a UPF 50+ protection factor.', 'Relaxed fit / High wicking and quick drying fabrics / Fully-dyed fabric / Guarded zip ends / Zippered side pocket with protected insert / Robust YKK zipper with semi auto-lock puller / Fabric: 86% Polyester, 14% Elastane', 220.00, 'Dark Green', 'https://assets.pasnormalstudios.com/8897/conversions/PN_FemaleSolitudeMeshJersey_DarkGreen-pdp-page.jpg?v=1668717576')
      ;
-
 
     --  ('jersey', 'm', 'name', 'description', 'details',155.00, 'color', 'url'),
