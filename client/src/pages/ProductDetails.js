@@ -24,7 +24,7 @@ export default function ProductDetails() {
     loadProduct(productId);
   }, [productId]);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <div className='loading-or-error'>Loading...</div>;
   if (error) {
     return (
       <div>
