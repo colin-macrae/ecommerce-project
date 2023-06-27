@@ -40,3 +40,8 @@
 .products-container {
   padding-top: 50px;
 }
+
+.loading-or-error {
+  margin-top: 60px;
+  font-size: 12px;
+}

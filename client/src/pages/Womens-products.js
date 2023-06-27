@@ -23,14 +23,8 @@ export default function WomensProducts() {
     getServerData();
   }, [serverData]);
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) {
-    return (
-      <div>
-        Error Loading : {error.message}
-      </div>
-    );
-  }
+  if (isLoading) return <div className='loading-or-error'>Loading...</div>;
+  if (error) return <div className='loading-or-error'>Error Loading : {error.message}</div>;
   if (!serverData) return null;
 
   return (
