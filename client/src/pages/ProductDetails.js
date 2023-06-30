@@ -33,7 +33,7 @@ export default function ProductDetails() {
     );
   }
   if (!product) return null;
-  const { name, url, description, color, details } = product;
+  const { name, url, description, color, details, price } = product;
 
   return (
     <div className="container prod-details-container">
@@ -44,7 +44,8 @@ export default function ProductDetails() {
         <div className="col-12 col-md-6 col-lg-6">
           <div className='text-content-container'>
             <h5>{name}</h5>
-            <p>{color}</p>
+            <p className='details-color'>{color}</p>
+            <p className='details-price'>${price}</p>
             <p>{description}</p>
             <h5 className='details-header'>Details</h5>
             <p>{details}</p>
