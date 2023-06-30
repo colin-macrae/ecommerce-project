@@ -3,7 +3,6 @@ import './productpages.css'
 import { Link } from 'react-router-dom';
 
 export default function MensProducts() {
-
   const [serverData, setServerData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState();
