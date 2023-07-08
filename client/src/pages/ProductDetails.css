@@ -37,9 +37,8 @@
 
 .details-price {
   margin: 0;
-  /* font-weight: bold; */
+  font-weight: bold;
   margin-bottom: 15px;
-  margin-top: 10px;
 }
 
 .details-color {
