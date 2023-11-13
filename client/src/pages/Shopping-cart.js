@@ -5,7 +5,15 @@ export default function ShoppingCart() {
   if (cartItemsQuantity > 0) {
     return (
       <div className="container  cart-items-container">
-        <h1 className='cart-header'>Cart</h1>
+        <h1 className='cart-header'>
+          Cart
+          <button
+            className='clear-cart-btn'
+            onClick={clearCart}>
+
+            Clear Cart
+          </button>
+        </h1>
         <CartItems />
         <div className='order-tally'>
           <div>
@@ -21,6 +29,7 @@ export default function ShoppingCart() {
               <button onClick={noCheckoutAvailable} className='checkout-btn'>
                 PROCEED TO CHECKOUT
               </button>
+
             </div>
           </div>
         </div>
@@ -78,6 +87,11 @@ export function removeFromCart(productId) {
   let cart = items
   const newCart = cart.filter((item) => item.productId !== productId)
   localStorage.setItem('cart', JSON.stringify(newCart))
+  window.location.reload()
+}
+
+export function clearCart () {
+  localStorage.setItem('cart', JSON.stringify([]))
   window.location.reload()
 }
 
