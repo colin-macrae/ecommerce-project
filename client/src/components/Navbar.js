@@ -24,7 +24,7 @@ export default function Navbar() {
             </Link>
           </div>
           <div className='nav-col-right one-third'>
-            <Link to="shoppingcart">
+            <Link to="/shoppingcart">
               <i className="fa-solid fa-cart-shopping"></i>
             </Link>
             <QuantityBubble />
@@ -36,17 +36,12 @@ export default function Navbar() {
 }
 
 // get quantity of items in cart //
-const cartItemsArray = getCart();
-export function cartQuantity() {
-  return cartItemsArray.length;
-}
-let cartItemsQuantity = cartQuantity()
-
 function QuantityBubble() {
-  if (cartItemsQuantity > 0) {
+  const cartQty = getCart().length
+  if (cartQty > 0) {
     return (
       <p className='cart-qty'>
-        {cartItemsQuantity}
+        {cartQty}
       </p>
     )
 } else return

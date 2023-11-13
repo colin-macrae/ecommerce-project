@@ -62,6 +62,17 @@
   font-size: 18px;
   margin-top: 15px;
   margin-bottom: 20px;
+  position: relative;
+}
+
+.clear-cart-btn {
+  position: absolute;
+  right: 0;
+  top: 3px;
+  font-size: .6rem;
+  background-color: black;
+  color: white;
+  border: none;
 }
 
 .checkout-btn {
