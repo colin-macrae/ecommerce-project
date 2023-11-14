@@ -10,7 +10,7 @@ import ProductDetails from './pages/ProductDetails';
 
 function App() {
   return (
-    <div className='container'>
+    <div className='container outer-container'>
       <Navbar />
       <Routes>
         <Route index element={<Home/>} />

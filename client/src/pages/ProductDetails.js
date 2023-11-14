@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './ProductDetails.css'
 import { addToCart } from './Shopping-cart.js'
+import { getCart } from './Shopping-cart.js';
 
 export default function ProductDetails() {
   const { productId } = useParams();
   const [product, setProduct] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState();
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     async function loadProduct(productId) {
@@ -35,8 +37,41 @@ export default function ProductDetails() {
   if (!product) return null;
   const { name, url, description, color, details, price } = product;
 
+  function checkQty () {
+    const cart = getCart()
+    for (let i = 0; i < cart.length; i++) {
+      if (cart[i].productId === product.productId) {
+        setShowModal(true);
+        return;
+      }
+    }
+  }
+
   return (
     <div className="container prod-details-container">
+
+      <div
+      className={
+        showModal ?
+        'one-item-only-modal' :
+        'one-item-only-modal hide'
+      }
+      >
+        <div className='one-item-only-box'>
+          <div className='one-item-only-text'>
+            Only one of each item may be added to cart
+          </div>
+          <div className='one-item-only-button-container'>
+            <button
+            className='one-item-only-button'
+            onClick={() => setShowModal(false)}
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      </div>
+
       <div className="row">
         <div className="col-12 col-md-6 col-lg-6">
           <img src={url} alt={name} className="image" />
@@ -51,7 +86,10 @@ export default function ProductDetails() {
             <p>{details}</p>
             <div className='button-div'>
               <button
-                onClick={() => addToCart(product)}
+                onClick={() => {
+                  checkQty();
+                  addToCart(product)
+                }}
               >
                 ADD TO CART
               </button>
