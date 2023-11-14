@@ -26,6 +26,7 @@
   padding: 3rem;
   margin-bottom: 25rem;
   border-radius: 5px;
+  max-width: 90%;
 }
 
 .one-item-only-text {
@@ -44,6 +45,7 @@
   background-color: black;
   color:white;
   width: 7rem;
+  border: none;
 }
 
 
