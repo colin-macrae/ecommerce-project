@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import './ProductDetails.css'
 import { addToCart } from './Shopping-cart.js'
 import { getCart } from './Shopping-cart.js';
+import Modal from '../components/Modal';
 
 export default function ProductDetails() {
   const { productId } = useParams();
@@ -47,31 +48,10 @@ export default function ProductDetails() {
     }
   }
 
+  const modalText = "Only one of each item may be added to cart"
+
   return (
     <div className="container prod-details-container">
-
-      <div
-      className={
-        showModal ?
-        'one-item-only-modal' :
-        'one-item-only-modal hide'
-      }
-      >
-        <div className='one-item-only-box'>
-          <div className='one-item-only-text'>
-            Only one of each item may be added to cart
-          </div>
-          <div className='one-item-only-button-container'>
-            <button
-            className='one-item-only-button'
-            onClick={() => setShowModal(false)}
-            >
-              OK
-            </button>
-          </div>
-        </div>
-      </div>
-
       <div className="row">
         <div className="col-12 col-md-6 col-lg-6">
           <img src={url} alt={name} className="image" />
@@ -97,6 +77,11 @@ export default function ProductDetails() {
           </div>
         </div>
       </div>
+      <Modal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        modalText={modalText}
+      />
     </div>
   );
 }

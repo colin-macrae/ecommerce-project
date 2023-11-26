@@ -1,16 +1,21 @@
 import './Shopping-cart.css'
 import CartItems from '../components/CartItems.js';
+import '../components/Modal.css';
+import { useState } from 'react';
 
 export default function ShoppingCart() {
+  const [showModal, setShowModal] = useState(false);
+  const modalText = "Delete all items from cart?"
+
   if (cartItemsQuantity > 0) {
     return (
-      <div className="container  cart-items-container">
+      <div className="container cart-items-container">
         <h1 className='cart-header'>
           Cart
           <button
             className='clear-cart-btn'
-            onClick={clearCart}>
-
+            onClick={() => setShowModal(true)}
+            >
             Clear Cart
           </button>
         </h1>
@@ -33,6 +38,11 @@ export default function ShoppingCart() {
             </div>
           </div>
         </div>
+        <Modal
+          showModal={showModal}
+          setShowModal={setShowModal}
+          modalText={modalText}
+        />
       </div>
     )
   } else {
@@ -58,6 +68,45 @@ export default function ShoppingCart() {
     )
   }
 }
+
+// Modal
+export function Modal({ showModal, setShowModal, modalText }) {
+  return (
+    <div
+      className={
+        showModal ?
+          'modal' :
+          'hide'
+      }
+    >
+      <div className='modal-box'>
+        <div className='modal-text'>
+          {modalText}
+        </div>
+        <div className='modal-btn-container'>
+          <button
+            className='modal-btn modal-cancel-btn'
+            onClick={() => setShowModal(false)}
+          >
+            Cancel
+          </button>
+          <button
+            className='modal-btn modal-delete-btn'
+            onClick={() => {
+              setShowModal(false);
+              clearCart();
+            }}
+          >
+            Clear Cart
+          </button>
+
+
+        </div>
+      </div>
+    </div>
+  )
+}
+
 
 // cart manipulation functions //
 export function getCart() {
