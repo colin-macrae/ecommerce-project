@@ -52,13 +52,6 @@ export default function ProductDetails() {
 
   return (
     <div className="container prod-details-container">
-
-      <Modal
-      showModal={showModal}
-      setShowModal={setShowModal}
-      modalText={modalText}
-      />
-
       <div className="row">
         <div className="col-12 col-md-6 col-lg-6">
           <img src={url} alt={name} className="image" />
@@ -84,6 +77,11 @@ export default function ProductDetails() {
           </div>
         </div>
       </div>
+      <Modal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        modalText={modalText}
+      />
     </div>
   );
 }

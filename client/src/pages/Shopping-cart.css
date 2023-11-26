@@ -95,6 +95,15 @@
   margin-top: 30px;
 }
 
+/* Modal */
+.modal-cancel-btn {
+  margin-right: 1rem;
+}
+
+.modal-delete-btn {
+  background-color: red !important;
+}
+
 /* desktop */
 @media (min-width: 990px) {
   .cart-items-container {
