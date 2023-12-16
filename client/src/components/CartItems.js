@@ -4,11 +4,8 @@ import { useState, useEffect } from 'react'
 import { getCart } from '../pages/Shopping-cart.js';
 
 export default function CartItems() {
-const [currentCart, setCurrentCart] = useState([]);
+const [currentCart, setCurrentCart] = useState(getCart());
 
-  useEffect(() => {
-    setCurrentCart(getCart())
-  }, []);
 
   const cartItem = currentCart.map(item =>
     <div key={item.productId} className="row cart-item-container" >
