@@ -1,6 +1,6 @@
 import '../pages/Shopping-cart.js'
 import { removeFromCart } from '../pages/Shopping-cart.js'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { getCart } from '../pages/Shopping-cart.js';
 
 export default function CartItems() {
