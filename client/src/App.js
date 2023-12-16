@@ -25,7 +25,8 @@ function App() {
 
           />}/>
         <Route path="/productdetails/:productId" element={<ProductDetails
-
+          currentCart={currentCart}
+          setCurrentCart={setCurrentCart}
 
         />
         } />

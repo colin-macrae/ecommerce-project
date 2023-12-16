@@ -125,28 +125,27 @@ export function getCart() {
   } else return cart
 }
 
-export function addToCart(product) {
+export function addToCart({ product, setCurrentCart, currentCart }) {
   const cart = getCart();
   for (let i = 0; i < cart.length; i++) {
     if (cart[i].productId === product.productId) {
       return
     }
-    console.log(cart)
   }
   cart.push(product);
   localStorage.setItem('cart', JSON.stringify(cart))
-  window.location.reload()
+  setCurrentCart(cart);
 }
 
 export function removeFromCart({productId, setCurrentCart, currentCart}) {
   const cart = getCart();
-  const newCart = cart.filter((item) => item.productId !== productId)
-  localStorage.setItem('cart', JSON.stringify(newCart))
-  setCurrentCart(getCart())
+  const newCart = cart.filter((item) => item.productId !== productId);
+  localStorage.setItem('cart', JSON.stringify(newCart));
+  setCurrentCart(newCart);
 }
 
 export function clearCart({ currentCart, setCurrentCart }) {
-  localStorage.setItem('cart', JSON.stringify([]))
+  localStorage.setItem('cart', JSON.stringify([]));
   const cart = getCart();
   setCurrentCart(cart);
 }

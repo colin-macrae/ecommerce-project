@@ -5,7 +5,7 @@ import { addToCart } from './Shopping-cart.js'
 import { getCart } from './Shopping-cart.js';
 import Modal from '../components/Modal';
 
-export default function ProductDetails() {
+export default function ProductDetails({currentCart, setCurrentCart}) {
   const { productId } = useParams();
   const [product, setProduct] = useState();
   const [isLoading, setIsLoading] = useState(true);
@@ -68,7 +68,7 @@ export default function ProductDetails() {
               <button
                 onClick={() => {
                   checkQty();
-                  addToCart(product)
+                  addToCart({product: product, currentCart, setCurrentCart})
                 }}
               >
                 ADD TO CART
