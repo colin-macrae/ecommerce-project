@@ -23,6 +23,9 @@ export default function ShoppingCart({ currentCart, setCurrentCart }) {
           </button>
         </h1>
         <CartItems
+
+          currentCart={currentCart}
+          setCurrentCart={setCurrentCart}
         />
         <div className='order-tally'>
           <div>
@@ -135,18 +138,17 @@ export function addToCart(product) {
   window.location.reload()
 }
 
-export function removeFromCart(productId) {
+export function removeFromCart({productId, setCurrentCart, currentCart}) {
   const cart = getCart();
   const newCart = cart.filter((item) => item.productId !== productId)
   localStorage.setItem('cart', JSON.stringify(newCart))
-  window.location.reload()
+  setCurrentCart(getCart())
 }
 
-export function clearCart ({currentCart, setCurrentCart}) {
+export function clearCart({ currentCart, setCurrentCart }) {
   localStorage.setItem('cart', JSON.stringify([]))
   const cart = getCart();
   setCurrentCart(cart);
-  console.log(cart, currentCart)
 }
 
 // total all item prices in cart //
