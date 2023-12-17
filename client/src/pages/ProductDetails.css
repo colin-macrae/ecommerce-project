@@ -24,7 +24,9 @@
   align-items: center;
 }
 
-.button-div button {
+
+
+.button-div .btn {
   background-color: black;
   border: none;
   color: white;
@@ -33,6 +35,10 @@
   height: 30px;
   margin: 30px 0 60px;
   text-align: center;
+}
+
+.button-div .btn-added {
+  background-color: gray;
 }
 
 .details-price {

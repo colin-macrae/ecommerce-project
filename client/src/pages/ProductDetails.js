@@ -50,6 +50,12 @@ export default function ProductDetails({currentCart, setCurrentCart}) {
 
   const modalText = "Only one of each item may be added to cart"
 
+  let added = false;
+  if (getCart()) {
+    const checkAdded = getCart().some((prod) => prod.productId === Number(productId));
+    added = checkAdded;
+  }
+
   return (
     <div className="container prod-details-container">
       <div className="row">
@@ -66,12 +72,13 @@ export default function ProductDetails({currentCart, setCurrentCart}) {
             <p>{details}</p>
             <div className='button-div'>
               <button
+                className={added ? "btn btn-added" : "btn"}
                 onClick={() => {
                   checkQty();
                   addToCart({product: product, currentCart, setCurrentCart})
                 }}
               >
-                ADD TO CART
+                {added ? "ADDED TO CART" : "ADD TO CART"}
               </button>
             </div>
           </div>
