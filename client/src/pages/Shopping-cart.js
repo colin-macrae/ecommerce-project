@@ -3,11 +3,14 @@ import CartItems from '../components/CartItems.js';
 import '../components/Modal.css';
 import { useState } from 'react';
 
-export default function ShoppingCart() {
+
+export default function ShoppingCart({ currentCart, setCurrentCart }) {
   const [showModal, setShowModal] = useState(false);
   const modalText = "Delete all items from cart?"
 
-  if (cartItemsQuantity > 0) {
+  const cartItemsQty = getCart().length
+
+  if (cartItemsQty > 0) {
     return (
       <div className="container cart-items-container">
         <h1 className='cart-header'>
@@ -19,7 +22,11 @@ export default function ShoppingCart() {
             Clear Cart
           </button>
         </h1>
-        <CartItems />
+        <CartItems
+
+          currentCart={currentCart}
+          setCurrentCart={setCurrentCart}
+        />
         <div className='order-tally'>
           <div>
             <div className='order-lineitem'>
@@ -42,6 +49,8 @@ export default function ShoppingCart() {
           showModal={showModal}
           setShowModal={setShowModal}
           modalText={modalText}
+          currentCart={currentCart}
+          setCurrentCart={setCurrentCart}
         />
       </div>
     )
@@ -70,7 +79,7 @@ export default function ShoppingCart() {
 }
 
 // Modal
-export function Modal({ showModal, setShowModal, modalText }) {
+export function Modal({ showModal, setShowModal, modalText, currentCart, setCurrentCart }) {
   return (
     <div
       className={
@@ -94,7 +103,7 @@ export function Modal({ showModal, setShowModal, modalText }) {
             className='modal-btn modal-delete-btn'
             onClick={() => {
               setShowModal(false);
-              clearCart();
+              clearCart({ currentCart, setCurrentCart });
             }}
           >
             Clear Cart
@@ -116,11 +125,8 @@ export function getCart() {
   } else return cart
 }
 
-const items = getCart();
-const cartItemsQuantity = items.length
-
-export function addToCart(product) {
-  const cart = items
+export function addToCart({ product, setCurrentCart, currentCart }) {
+  const cart = getCart();
   for (let i = 0; i < cart.length; i++) {
     if (cart[i].productId === product.productId) {
       return
@@ -128,27 +134,29 @@ export function addToCart(product) {
   }
   cart.push(product);
   localStorage.setItem('cart', JSON.stringify(cart))
-  window.location.reload()
+  setCurrentCart(cart);
 }
 
-export function removeFromCart(productId) {
-  let cart = items
-  const newCart = cart.filter((item) => item.productId !== productId)
-  localStorage.setItem('cart', JSON.stringify(newCart))
-  window.location.reload()
+export function removeFromCart({productId, setCurrentCart, currentCart}) {
+  const cart = getCart();
+  const newCart = cart.filter((item) => item.productId !== productId);
+  localStorage.setItem('cart', JSON.stringify(newCart));
+  setCurrentCart(newCart);
 }
 
-export function clearCart () {
-  localStorage.setItem('cart', JSON.stringify([]))
-  window.location.reload()
+export function clearCart({ currentCart, setCurrentCart }) {
+  localStorage.setItem('cart', JSON.stringify([]));
+  const cart = getCart();
+  setCurrentCart(cart);
 }
 
 // total all item prices in cart //
 function subtotal() {
+  const cart = getCart();
   let sum = 0;
-  if (items) {
-    for (let i = 0; i < items.length; i++) {
-      sum += Number(items[i].price)
+  if (cart) {
+    for (let i = 0; i < cart.length; i++) {
+      sum += Number(cart[i].price)
     }
     return sum;
   } else return
