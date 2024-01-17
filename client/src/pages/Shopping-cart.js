@@ -11,13 +11,9 @@ export default function ShoppingCart({ currentCart, setCurrentCart }) {
 
   const cartItemsQty = getCart().length
 
-
-  // setCartTotal(subtotal());
   useEffect(function () {
     setCartTotal(subtotal());
   }, []);
-
-
 
   if (cartItemsQty > 0) {
     return (
@@ -163,7 +159,6 @@ export function clearCart({ currentCart, setCurrentCart, setCartTotal }) {
 }
 
 // total all item prices in cart //
-
 export function subtotal() {
   const cart = getCart();
   let sum = 0;
@@ -174,8 +169,6 @@ export function subtotal() {
     return sum;
   } else return
 }
-
-
 
 // cart button alert //
 function noCheckoutAvailable() {

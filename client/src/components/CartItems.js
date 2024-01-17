@@ -1,7 +1,7 @@
 import '../pages/Shopping-cart.js'
 import { removeFromCart } from '../pages/Shopping-cart.js'
 
-export default function CartItems({currentCart, setCurrentCart, setCartTotal }) {
+export default function CartItems({ currentCart, setCurrentCart, setCartTotal }) {
   return (
     <div>
       {currentCart.map(item =>
