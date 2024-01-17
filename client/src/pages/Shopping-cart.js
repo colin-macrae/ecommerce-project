@@ -1,14 +1,23 @@
 import './Shopping-cart.css'
 import CartItems from '../components/CartItems.js';
 import '../components/Modal.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 export default function ShoppingCart({ currentCart, setCurrentCart }) {
   const [showModal, setShowModal] = useState(false);
+  const [cartTotal, setCartTotal] = useState(0);
   const modalText = "Delete all items from cart?"
 
   const cartItemsQty = getCart().length
+
+
+  // setCartTotal(subtotal());
+  useEffect(function () {
+    setCartTotal(subtotal());
+  }, []);
+
+
 
   if (cartItemsQty > 0) {
     return (
@@ -23,15 +32,15 @@ export default function ShoppingCart({ currentCart, setCurrentCart }) {
           </button>
         </h1>
         <CartItems
-
           currentCart={currentCart}
           setCurrentCart={setCurrentCart}
+          setCartTotal={setCartTotal}
         />
         <div className='order-tally'>
           <div>
             <div className='order-lineitem'>
               <p>Subtotal</p>
-              <p className='dollar-amt'>${amount}</p>
+              <p className='dollar-amt'>${cartTotal}</p>
             </div>
             <div className='order-lineitem'>
               <p>Delivery</p>
@@ -51,6 +60,7 @@ export default function ShoppingCart({ currentCart, setCurrentCart }) {
           modalText={modalText}
           currentCart={currentCart}
           setCurrentCart={setCurrentCart}
+          setCartTotal={setCartTotal}
         />
       </div>
     )
@@ -63,7 +73,7 @@ export default function ShoppingCart({ currentCart, setCurrentCart }) {
           <div>
             <div className='order-lineitem'>
               <p>Subtotal</p>
-              <p className='dollar-amt'>${amount}</p>
+              <p className='dollar-amt'>${cartTotal}</p>
             </div>
             <div className='order-lineitem'>
               <p>Delivery</p>
@@ -79,7 +89,7 @@ export default function ShoppingCart({ currentCart, setCurrentCart }) {
 }
 
 // Modal
-export function Modal({ showModal, setShowModal, modalText, currentCart, setCurrentCart }) {
+export function Modal({ showModal, setShowModal, modalText, currentCart, setCurrentCart, setCartTotal }) {
   return (
     <div
       className={
@@ -103,7 +113,7 @@ export function Modal({ showModal, setShowModal, modalText, currentCart, setCurr
             className='modal-btn modal-delete-btn'
             onClick={() => {
               setShowModal(false);
-              clearCart({ currentCart, setCurrentCart });
+              clearCart({ currentCart, setCurrentCart, setCartTotal });
             }}
           >
             Clear Cart
@@ -137,21 +147,24 @@ export function addToCart({ product, setCurrentCart, currentCart }) {
   setCurrentCart(cart);
 }
 
-export function removeFromCart({productId, setCurrentCart, currentCart}) {
+export function removeFromCart({productId, setCurrentCart, currentCart, setCartTotal}) {
   const cart = getCart();
   const newCart = cart.filter((item) => item.productId !== productId);
   localStorage.setItem('cart', JSON.stringify(newCart));
   setCurrentCart(newCart);
+  setCartTotal(subtotal())
 }
 
-export function clearCart({ currentCart, setCurrentCart }) {
+export function clearCart({ currentCart, setCurrentCart, setCartTotal }) {
   localStorage.setItem('cart', JSON.stringify([]));
   const cart = getCart();
   setCurrentCart(cart);
+  setCartTotal(0);
 }
 
 // total all item prices in cart //
-function subtotal() {
+
+export function subtotal() {
   const cart = getCart();
   let sum = 0;
   if (cart) {
@@ -161,7 +174,8 @@ function subtotal() {
     return sum;
   } else return
 }
-const amount = subtotal()
+
+
 
 // cart button alert //
 function noCheckoutAvailable() {

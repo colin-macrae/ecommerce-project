@@ -1,7 +1,7 @@
 import '../pages/Shopping-cart.js'
 import { removeFromCart } from '../pages/Shopping-cart.js'
 
-export default function CartItems({currentCart, setCurrentCart}) {
+export default function CartItems({currentCart, setCurrentCart, setCartTotal }) {
   return (
     <div>
       {currentCart.map(item =>
@@ -18,7 +18,7 @@ export default function CartItems({currentCart, setCurrentCart}) {
               <p className='product-color'>{item.color}</p>
               <div className='remove-button-div'>
                 <button
-                  onClick={() => removeFromCart({ productId: item.productId, setCurrentCart })}
+                  onClick={() => removeFromCart({ productId: item.productId, setCurrentCart, setCartTotal })}
                 >
                   (-) Remove Item
                 </button>
